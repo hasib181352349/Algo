@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int a[20]={6,4,8,18,43,45,46,49,53,55,89,100};
+    int i,j,p,n=12,swap;
+    int min,max,mid;
+    for(j=0;j<n-i;j++){
+        for(i=j+1;i<n;i++){
+            if (a[j]<a[i]){
+                swap=a[j];
+             a[j]=a[i];
+             a[i]=swap;
+            }
+        }
+    }
+
+
+    printf("Enter search value : \n");
+    scanf("%d",&p);
+
+    min=0;
+    max=(n-1);
+    mid=((min+max)/2);
+    while (min<=max){
+        if(a[mid]==p){
+            printf("The mid is : %d\n",mid);
+break;
+            }
+            else if (a[mid]<p){
+                min=mid+1;
+            }
+            else{ max=mid-1;
+            }
+         mid=((min+max)/2);
+         if(min>max){
+            printf("Value not found .\n");
+         }
+          }
+
+    getch();
+}
+
+
